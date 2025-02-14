@@ -1,0 +1,579 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*  padding: 20%;
+  display: flex;           
+  justify-content: center;  
+  align-items: center;       
+  height: 100vh;            
+  margin-top: 50px;  */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 50px;
+}
+
+.grid-container {
+  /*   display: grid;
+  height: 100vh;
+  grid-template: repeat(24, 350px) / repeat(1, 350px);
+  gap: 10px;
+  position: absolute;
+  overflow: hidden; */
+
+  display: grid;
+  grid-template: repeat(1, 350px) / repeat(24, 350px); /* 1 row, 24 columns */
+  gap: 10px;
+  position: relative;
+  height: auto; /* No need for full height */
+  overflow-x: auto; /* Allows scrolling */
+  overflow-y: hidden; /* Avoids unnecessary vertical scrolling */
+}
+
+/* 
+===================================
+Responsive Alien Animation with css
+=================================== */
+
+.anim-1 {
+  background-color: purple;
+}
+.ufo {
+  height: 200px;
+  width: 150px;
+  background: linear-gradient(to bottom, #e6e3f5 90%, #ede544 90%);
+  border-radius: 100px 100px 0 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 170px;
+  top: 50%;
+  animation: float 3s infinite;
+}
+@keyframes float {
+  50% {
+    top: calc(25% + 20px);
+  }
+}
+
+.ufo:before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 75px;
+  background-color: #eebb22;
+  border-radius: 0 0 80px 80px;
+  bottom: -75px;
+}
+
+.ufo:after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 100px;
+  border: 7px solid #eebb22;
+  border-radius: 100px 100px 0 0;
+  left: 12%;
+  border-bottom: none;
+  top: 250px;
+}
+
+.alien {
+  position: ABSOLUTE;
+  height: 130px;
+  width: 110px;
+  background-color: #40bf60;
+  left: 13.2%;
+  top: 25%;
+  border-radius: 110px 110px 0 0;
+}
+
+.alien:before {
+  position: absolute;
+  content: "";
+  height: 65px;
+  width: 65px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  left: 22.5px;
+  top: 30px;
+}
+
+.alien:after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 30px;
+  border: 7px solid #000000;
+  border-bottom: transparent;
+  border-radius: 200px 200px 0 0;
+  left: 32.5px;
+  top: 40px;
+}
+
+.mouth {
+  position: absolute;
+  height: 15px;
+  width: 30px;
+  background-color: #118c58;
+  border-radius: 5px 5px 32.5px 32.5px;
+  left: 40px;
+  top: 105px;
+}
+
+.details,
+.details:before {
+  height: 20px;
+  width: 40px;
+  border: 7px solid #40bf60;
+  border-bottom: none;
+  border-radius: 40px 40px 0 0;
+}
+
+.details {
+  transform: rotate(65deg);
+}
+
+.details:before {
+  position: absolute;
+  content: "";
+  transform: rotate(-130deg);
+  left: 25px;
+  bottom: 55px;
+}
+
+.details:after {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background-color: #40bf60;
+  border-radius: 50%;
+  bottom: -10px;
+  left: -15px;
+  box-shadow: 55px -100px #40bf60;
+}
+
+/* 
+==========================================
+Checkbox As A working Bulb with only css
+==========================================
+ */
+
+.anim-2 {
+  background-color: #ffffff;
+  position: relative;
+
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  position: absolute;
+  display: block;
+  height: 50%;
+  width: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: #d0d5f4;
+  top: calc(50% - 25%);
+  left: calc(50% - 25%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #b4b9f1;
+  height: 40%;
+  width: 10%;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+input[type="checkbox"]:after {
+  position: absolute;
+  content: "";
+  height: 15%;
+  width: 15%;
+  border: 20px solid #b4b9f1;
+  border-radius: 50%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 55px;
+}
+
+label {
+  position: absolute;
+  height: 20%;
+  width: 20%;
+  background-color: #08475e;
+  border-radius: 0 0 20% 20%;
+  left: calc(50% - 9.8%);
+  top: calc(50% + 23.2%);
+  background: linear-gradient(#08475e 50%, #05303d 50%);
+}
+
+label:before {
+  position: absolute;
+  content: "";
+  height: 42.5%;
+  width: 42.5%;
+  background-color: #05303d;
+  bottom: -10px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+label:after {
+  position: absolute;
+  content: "";
+  height: 280px;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.3);
+  bottom: -10px;
+  left: -55px;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #ffd845;
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: #ff8e00;
+}
+
+input[type="checkbox"]:checked:after {
+  border: 20px solid #ff8e00;
+}
+
+/* 
+==========================================
+CSS Crow Animation
+==========================================
+ */
+
+.anim-3 {
+  background-color: #9393f5;
+  position: relative;
+}
+
+
+
+.crow {
+  position: absolute;
+  height: 20%;
+  width: 50%;
+  background-color: #000000;
+  border-radius: 0 0 0 70px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  perspective: 500px;
+}
+
+
+.bird-body {
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  animation: fly 2s infinite ;
+}
+
+@keyframes fly {
+  50% {
+    top: calc(5% + 20px);
+  }
+}
+
+.crow:before {
+  position: absolute;
+  content: "";
+  height: 20.6%;
+  width: 8.2%;
+  background-color: #000000;
+  box-shadow: -0.18em 0 0 0.25em #ffffff;
+  border-radius: 50%;
+  top: 20.6%;
+  right: 22.86%;
+  animation : blink 3s infinite;
+}
+
+.crow:after {
+  position: absolute;
+  content: "";
+  height: 20.6%;
+  width: 8.2%;
+  background-color: #000000;
+  box-shadow: 0.18em 0 0 0.25em #ffffff;
+  border-radius: 50%;
+  top: 20.6%;
+  right: 13.7%;
+  animation : blink 3s infinite;
+}
+
+@keyframes blink {
+  5% {
+    transform: scaleY(0);
+  }
+  10% {
+    transform: scaleY(1);
+  }
+}
+
+.beak-upper {
+  position: absolute;
+  height: 15%;
+  width: 20%;
+  background-color: #623193;
+  top: 40%;
+  left: 72.48%;
+  border-radius: 0 3.75em 0 0;
+  animation: caw-1 2s infinite;
+  transform-origin: 0 50%;
+}
+
+@keyframes caw-1 {
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(-15deg);
+  }
+  60% {
+    transform: roate(0deg);
+  }
+}
+
+.beak-lower  {
+  position: absolute;
+  height: 6.25%;
+  width: 20%;
+  background-color: #623193;
+  left: 72.48%;
+  top: 53.6%;
+  border-radius: 0 0 1.25em 0; 
+  animation: caw-2 2s infinite;
+  transform-origin: 0 50%;
+}
+
+@keyframes caw-2 {
+  20% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(0);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  60% {
+    transform: roate(0deg);
+  }
+}
+
+.wings {
+  position: absolute;
+  top: 16.275px;
+  left: 87.5px;
+  animation: flap 2s infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes flap {
+  50% {
+    transform: rotateX(180deg);
+  }
+}
+.wing {
+  position: absolute;
+  height: 122px;
+  width: 17.5px;
+  background-color: #310062;
+  border-radius: 0 1.25em 1.25em 1.25em;
+}
+
+.wing::before {
+  content: "";
+  position: absolute;
+  height: 111.25px;
+  width: 17.5px;
+  background-color: #310062;
+  border-radius: 0 0 1.25em 1.25em;
+  right: 1.10em;
+}
+
+
+.wing::after {
+  content: "";
+  position: absolute;
+  height: 100.225px;
+  width: 17.5px;
+  background-color: #310062;
+  border-radius: 1.25em 0 1.25em 1.25em;
+  right: 2.2em;
+}
+
+.tail {
+  position: absolute;
+  height: 17.5px;
+  width: 43.68px;
+  background-color: #000000; 
+  left: -26.18px;
+  top: 5.425px; 
+  border-radius: 1.25em;
+  transform: rotate(-5deg);
+  animation: wiggle 0.6s infinite;
+}
+
+@keyframes wiggle {
+  50% {
+    transform: rotate(5deg);
+  }
+}
+.tail::before, .tail::after {
+  position: absolute;
+  content: "";
+  height: 17.5px;
+  width: 43.68px;
+  background-color: #000000; 
+  border-radius: 1.25em;
+  transform-origin: right;
+}
+.tail::before {
+  transform: rotate(35deg);
+}
+
+.tail::after {
+  transform: rotate(-35deg);
+}
+
+
+.leg-1 , .leg-2 {
+  position: absolute;
+  height: 67.5px;
+  width: 17.5px;
+  top: 163.975px;
+  transform: rotate(30deg);
+  animation: leg 2s infinite;
+}
+
+@keyframes leg {
+  50% {
+    transform: rotate(40deg);
+  }
+}
+
+.leg-1 {
+  background-color: #310062;
+  left: 112.5px;
+}
+
+.leg-2 {
+  background-color: #623193;
+  left: 103.68px;
+}
+
+.leg-1::before, .leg-2::before {
+  position: absolute;
+  content: "";
+  height: 21.875px;
+  width: 8.68px;
+  background-color: transparent; 
+  border-radius: 0 1.87em 1.87em 0;
+  top: 55px;
+  right: -6.34px;
+}
+
+.leg-1::before {
+  border: 0.93em solid #310062;
+  border-left: none;
+}
+
+.leg-2::before {
+  border: 0.93em solid #623193;
+  border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.anim-4 {
+  background-color: purple;
+}
+
+.anim-5 {
+  background-color: red;
+}
+
+.anim-6 {
+  background-color: violet;
+}
+
+/* 
+===================================
+BREAKPOINTS
+=================================== */
+@media (min-width: 992px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(24, 350px) / repeat(2, 350px);
+    gap: 10px;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .ufo {
+    animation: float 3s infinite;
+    top: 13%;
+  }
+
+  @keyframes float {
+    50% {
+      top: calc(15% + 20px);
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(24, 350px) / repeat(4, 350px);
+    gap: 10px;
+    position: absolute;
+    overflow: hidden;
+  }
+}
