@@ -168,7 +168,6 @@ Checkbox As A working Bulb with only css
 .anim-2 {
   background-color: #ffffff;
   position: relative;
-
 }
 
 input[type="checkbox"] {
@@ -268,8 +267,6 @@ CSS Crow Animation
   position: relative;
 }
 
-
-
 .crow {
   position: absolute;
   height: 20%;
@@ -282,12 +279,11 @@ CSS Crow Animation
   perspective: 500px;
 }
 
-
 .bird-body {
   height: 350px;
   width: 350px;
   position: absolute;
-  animation: fly 2s infinite ;
+  animation: fly 2s infinite;
 }
 
 @keyframes fly {
@@ -306,7 +302,7 @@ CSS Crow Animation
   border-radius: 50%;
   top: 20.6%;
   right: 22.86%;
-  animation : blink 3s infinite;
+  animation: blink 3s infinite;
 }
 
 .crow:after {
@@ -319,7 +315,7 @@ CSS Crow Animation
   border-radius: 50%;
   top: 20.6%;
   right: 13.7%;
-  animation : blink 3s infinite;
+  animation: blink 3s infinite;
 }
 
 @keyframes blink {
@@ -359,14 +355,14 @@ CSS Crow Animation
   }
 }
 
-.beak-lower  {
+.beak-lower {
   position: absolute;
   height: 6.25%;
   width: 20%;
   background-color: #623193;
   left: 72.48%;
   top: 53.6%;
-  border-radius: 0 0 1.25em 0; 
+  border-radius: 0 0 1.25em 0;
   animation: caw-2 2s infinite;
   transform-origin: 0 50%;
 }
@@ -383,7 +379,7 @@ CSS Crow Animation
     transform: rotate(15deg);
   }
   60% {
-    transform: roate(0deg);
+    transform: rotate(0deg);
   }
 }
 
@@ -415,9 +411,8 @@ CSS Crow Animation
   width: 17.5px;
   background-color: #310062;
   border-radius: 0 0 1.25em 1.25em;
-  right: 1.10em;
+  right: 1.1em;
 }
-
 
 .wing::after {
   content: "";
@@ -433,9 +428,9 @@ CSS Crow Animation
   position: absolute;
   height: 17.5px;
   width: 43.68px;
-  background-color: #000000; 
+  background-color: #000000;
   left: -26.18px;
-  top: 5.425px; 
+  top: 5.425px;
   border-radius: 1.25em;
   transform: rotate(-5deg);
   animation: wiggle 0.6s infinite;
@@ -446,12 +441,13 @@ CSS Crow Animation
     transform: rotate(5deg);
   }
 }
-.tail::before, .tail::after {
+.tail::before,
+.tail::after {
   position: absolute;
   content: "";
   height: 17.5px;
   width: 43.68px;
-  background-color: #000000; 
+  background-color: #000000;
   border-radius: 1.25em;
   transform-origin: right;
 }
@@ -463,8 +459,8 @@ CSS Crow Animation
   transform: rotate(-35deg);
 }
 
-
-.leg-1 , .leg-2 {
+.leg-1,
+.leg-2 {
   position: absolute;
   height: 67.5px;
   width: 17.5px;
@@ -489,12 +485,13 @@ CSS Crow Animation
   left: 103.68px;
 }
 
-.leg-1::before, .leg-2::before {
+.leg-1::before,
+.leg-2::before {
   position: absolute;
   content: "";
   height: 21.875px;
   width: 8.68px;
-  background-color: transparent; 
+  background-color: transparent;
   border-radius: 0 1.87em 1.87em 0;
   top: 55px;
   right: -6.34px;
@@ -510,28 +507,189 @@ CSS Crow Animation
   border-left: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
+==========================================
+CSS Crab Animation
+==========================================
+ */
 
 .anim-4 {
   background-color: purple;
+  position: relative;
 }
+
+.container-4 {
+  height: 350px;
+  width: 350px;
+  background-color: #edb826;
+  position: absolute;
+}
+
+.crab-body {
+  height: 100px;
+  width: 150px;
+  background-color: red;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom-left-radius: 65px;
+  border-bottom-right-radius: 65px;
+  box-shadow: inset 10px -5px  rgba(176, 32, 32, 1);
+  z-index: 1;
+}
+
+.crab-body::before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 20px;
+  border: 7px solid black;
+  border-radius: 0 0 1.87em 1.87em;
+  background-color: transparent;
+  border-top: none;
+  top: 20px;
+  left: 60px;
+}
+
+.crab-eye1 {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  top: 142px;
+  left: 120px;
+}
+
+.crab-eye1:before {
+  position: absolute;
+  content: "";
+  height: 17.5px;
+  width: 17.5px;
+  background-color: #5c0808;
+  border-radius: 50%;
+  top: 8.75px;
+  left:8.75px;
+}
+
+.crab-eye2 {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background-color: white;
+  border-radius: 50%;
+  top: 142px;
+  left:200px;
+}
+
+.crab-eye2:before {
+  position: absolute;
+  content: "";
+  height: 17.5px;
+  width: 17.5px;
+  background-color: #5c0808;
+  border-radius: 50%;
+  top: 8.75px;
+  left:8.75px;
+}
+
+.crab-left-hand {
+  position: absolute;
+  height:120px;
+  width: 65px;
+  border: 10px solid  #cc1d23;
+  border-radius: 50%;
+  border-top-color: transparent; 
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-40deg); 
+  top: 31%;
+  left: 25.5%;
+  z-index: 0;
+}
+
+.left-claws {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 35px;
+  background-color: red;
+  border-radius: 0 0 50px 50px;
+  transform: rotate(90deg); 
+  top: 120px;
+  left: 53px;
+}
+
+.left-claws:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 35px;
+  background-color: red;
+  border-radius: 0 0 50px 50px;
+  transform: rotate(180deg);
+  top: -20px
+}
+
+
+
+.crab-right-hand {
+  position: absolute;
+  height:120px;
+  width: 65px;
+  border: 10px solid  #cc1d23;
+  border-radius: 50%;
+  border-top-color: transparent; 
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(40deg); 
+  top: 31%;
+  left: 54%;
+  z-index: 0;
+}
+
+.right-claws {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 35px;
+  background-color: red;
+  border-radius: 0 0 50px 50px;
+  transform: rotate(90deg); 
+  top: 120px;
+  left: 235px;
+}
+
+.right-claws:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 35px;
+  background-color: red;
+  border-radius: 0 0 50px 50px;
+  transform: rotate(180deg);
+  top: -20px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .anim-5 {
   background-color: red;
