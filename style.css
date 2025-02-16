@@ -31,7 +31,7 @@ body {
   grid-template: repeat(1, 350px) / repeat(24, 350px); /* 1 row, 24 columns */
   gap: 10px;
   position: relative;
-  height: auto; /* No need for full height */
+  height: auto;/* No need for full height */
   overflow-x: auto; /* Allows scrolling */
   overflow-y: auto; /* Avoids unnecessary vertical scrolling */
 }
@@ -288,8 +288,8 @@ CSS Crow Animation
 
 @keyframes fly {
   50% {
-    top: calc(5% + 20px);
-  }
+    transform: translateY(50px)
+}
 }
 
 .crow:before {
@@ -508,9 +508,9 @@ CSS Crow Animation
 }
 
 /* 
-==========================================
+===================
 CSS Crab Animation
-==========================================
+===================
  */
 
 .anim-4 {
@@ -522,13 +522,18 @@ CSS Crab Animation
   height: 350px;
   width: 350px;
   position: absolute;
-  animation: covers 2s infinite;
+  animation: covers 5s ease-in-out infinite;
 }
 
 @keyframes covers {
-  50% {
-      right: calc(9% + 20px);
+  20% {
+    transform: translateX(-10px);
   }
+
+  50% {
+    transform: translateX(-30px);
+  }
+
 }
 
 .crab-body {
@@ -541,7 +546,7 @@ CSS Crab Animation
   transform: translate(-50%, -50%);
   border-bottom-left-radius: 65px;
   border-bottom-right-radius: 65px;
-  box-shadow: inset 10px -5px  rgba(176, 32, 32, 1);
+  box-shadow: inset 10px -5px rgba(176, 32, 32, 1);
   z-index: 2;
 }
 
@@ -576,7 +581,7 @@ CSS Crab Animation
   background-color: #5c0808;
   border-radius: 50%;
   top: 8.75px;
-  left:8.75px;
+  left: 8.75px;
 }
 
 .crab-eye2 {
@@ -586,7 +591,7 @@ CSS Crab Animation
   background-color: white;
   border-radius: 50%;
   top: 142px;
-  left:200px;
+  left: 200px;
 }
 
 .crab-eye2:before {
@@ -597,19 +602,19 @@ CSS Crab Animation
   background-color: #5c0808;
   border-radius: 50%;
   top: 8.75px;
-  left:8.75px;
+  left: 8.75px;
 }
 
 .crab-left-hand {
   position: absolute;
-  height:120px;
+  height: 120px;
   width: 65px;
-  border: 10px solid  #cc1d23;
+  border: 10px solid #cc1d23;
   border-radius: 50%;
-  border-top-color: transparent; 
+  border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
-  transform: rotate(-40deg); 
+  transform: rotate(-40deg);
   top: 31%;
   left: 25.5%;
   z-index: 0;
@@ -622,7 +627,7 @@ CSS Crab Animation
   width: 35px;
   background-color: red;
   border-radius: 0 0 50px 50px;
-  transform: rotate(90deg); 
+  transform: rotate(90deg);
   top: 146px;
   left: 45px;
   animation: claws-left 2s infinite;
@@ -634,7 +639,6 @@ CSS Crab Animation
     transform: rotate(75deg);
   }
 }
-
 
 .left-2 {
   position: absolute;
@@ -656,18 +660,16 @@ CSS Crab Animation
   }
 }
 
-
-
 .crab-right-hand {
   position: absolute;
-  height:120px;
+  height: 120px;
   width: 65px;
-  border: 10px solid  #cc1d23;
+  border: 10px solid #cc1d23;
   border-radius: 50%;
-  border-top-color: transparent; 
+  border-top-color: transparent;
   border-left-color: transparent;
   border-bottom-color: transparent;
-  transform: rotate(40deg); 
+  transform: rotate(40deg);
   top: 31%;
   left: 54%;
   z-index: 0;
@@ -680,7 +682,7 @@ CSS Crab Animation
   width: 35px;
   background-color: red;
   border-radius: 0 0 50px 50px;
-  transform: rotate(90deg); 
+  transform: rotate(90deg);
   top: 146px;
   left: 227px;
   transform-origin: right top;
@@ -689,7 +691,7 @@ CSS Crab Animation
 
 @keyframes rot-1 {
   50% {
-    transform: rotate(75deg)
+    transform: rotate(75deg);
   }
 }
 
@@ -708,7 +710,7 @@ CSS Crab Animation
 
 @keyframes rot-2 {
   50% {
-    transform: rotate(285deg)
+    transform: rotate(285deg);
   }
 }
 
@@ -729,7 +731,7 @@ CSS Crab Animation
   }
 }
 
-.leftleg2  {
+.leftleg2 {
   position: absolute;
   content: "";
   height: 70px;
@@ -746,7 +748,6 @@ CSS Crab Animation
   }
 }
 
-
 .leftleg3 {
   position: absolute;
   content: "";
@@ -757,8 +758,6 @@ CSS Crab Animation
   top: 215px;
   animation: leg1 2s infinite;
 }
-
-
 
 .rightleg1 {
   position: absolute;
@@ -781,7 +780,6 @@ CSS Crab Animation
   animation: leg2 2s infinite;
 }
 
-
 .rightleg3 {
   position: absolute;
   content: "";
@@ -793,24 +791,72 @@ CSS Crab Animation
   animation: leg1 2s infinite;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* 
+===================
+CSS SOS Animation
+===================
+ */
 .anim-5 {
   background-color: red;
 }
+
+.container5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  width: 350px;
+  background: linear-gradient(#010163 70%, #5294ff 30%);
+  display: relative;
+}
+
+.foundation {
+  height: 60px;
+  width: 200px;
+  background-color: #fecd64;
+  position: absolute;
+  transform: translateY(145px);
+  border-radius: 60px 60px 0 0;
+}
+
+.tower {
+  height: 0;
+  width: 120px;
+  border-bottom: 190px solid #deeefa;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  transform: translateY(55px);
+}
+
+.tower:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 114px;
+  background-color: #d93434;
+  transform: translate(-7px, 120px);
+}
+
+.tower:after {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 102px;
+  background-color: #d93434;
+  transform: translate(-1px, 15px);
+}
+
+.sand-extra {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #fecd64;
+  border-radius: 50%;
+  transform: translate(-50px, 150px);
+}
+
+
 
 .anim-6 {
   background-color: violet;
@@ -826,9 +872,13 @@ BREAKPOINTS
     height: 100vh;
     grid-template: repeat(24, 350px) / repeat(2, 350px);
     gap: 10px;
-    position: absolute;
-    overflow: hidden;
+    position: relative;
+    overflow: scroll;
   }
+
+  .grid-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and Opera */
+}
 
   .ufo {
     animation: float 3s infinite;
@@ -849,6 +899,6 @@ BREAKPOINTS
     grid-template: repeat(24, 350px) / repeat(4, 350px);
     gap: 10px;
     position: absolute;
-    overflow: hidden;
+    overflow: scroll;
   }
 }
