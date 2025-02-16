@@ -33,7 +33,7 @@ body {
   position: relative;
   height: auto; /* No need for full height */
   overflow-x: auto; /* Allows scrolling */
-  overflow-y: hidden; /* Avoids unnecessary vertical scrolling */
+  overflow-y: auto; /* Avoids unnecessary vertical scrolling */
 }
 
 /* 
@@ -514,15 +514,21 @@ CSS Crab Animation
  */
 
 .anim-4 {
-  background-color: purple;
+  background-color: #edb826;
   position: relative;
 }
 
 .container-4 {
   height: 350px;
   width: 350px;
-  background-color: #edb826;
   position: absolute;
+  animation: covers 2s infinite;
+}
+
+@keyframes covers {
+  50% {
+      right: calc(9% + 20px);
+  }
 }
 
 .crab-body {
@@ -536,7 +542,7 @@ CSS Crab Animation
   border-bottom-left-radius: 65px;
   border-bottom-right-radius: 65px;
   box-shadow: inset 10px -5px  rgba(176, 32, 32, 1);
-  z-index: 1;
+  z-index: 2;
 }
 
 .crab-body::before {
@@ -544,7 +550,7 @@ CSS Crab Animation
   content: "";
   height: 10px;
   width: 20px;
-  border: 7px solid black;
+  border: 7px solid #292121;
   border-radius: 0 0 1.87em 1.87em;
   background-color: transparent;
   border-top: none;
@@ -609,7 +615,7 @@ CSS Crab Animation
   z-index: 0;
 }
 
-.left-claws {
+.left-1 {
   position: absolute;
   content: "";
   height: 20px;
@@ -617,19 +623,37 @@ CSS Crab Animation
   background-color: red;
   border-radius: 0 0 50px 50px;
   transform: rotate(90deg); 
-  top: 120px;
-  left: 53px;
+  top: 146px;
+  left: 45px;
+  animation: claws-left 2s infinite;
+  transform-origin: right top;
 }
 
-.left-claws:before {
+@keyframes claws-left {
+  50% {
+    transform: rotate(75deg);
+  }
+}
+
+
+.left-2 {
   position: absolute;
   content: "";
   height: 20px;
   width: 35px;
   background-color: red;
   border-radius: 0 0 50px 50px;
-  transform: rotate(180deg);
-  top: -20px
+  transform: rotate(270deg);
+  top: 146px;
+  left: 80px;
+  animation: claws-2 2s infinite;
+  transform-origin: left top;
+}
+
+@keyframes claws-2 {
+  50% {
+    transform: rotate(285deg);
+  }
 }
 
 
@@ -649,7 +673,7 @@ CSS Crab Animation
   z-index: 0;
 }
 
-.right-claws {
+.right-1 {
   position: absolute;
   content: "";
   height: 20px;
@@ -657,24 +681,117 @@ CSS Crab Animation
   background-color: red;
   border-radius: 0 0 50px 50px;
   transform: rotate(90deg); 
-  top: 120px;
-  left: 235px;
+  top: 146px;
+  left: 227px;
+  transform-origin: right top;
+  animation: rot-1 2s infinite;
 }
 
-.right-claws:before {
+@keyframes rot-1 {
+  50% {
+    transform: rotate(75deg)
+  }
+}
+
+.right-2 {
   position: absolute;
-  content: "";
   height: 20px;
   width: 35px;
   background-color: red;
   border-radius: 0 0 50px 50px;
-  transform: rotate(180deg);
-  top: -20px
+  transform: rotate(270deg);
+  top: 146px;
+  left: 262px;
+  transform-origin: left top;
+  animation: rot-2 2s infinite;
+}
+
+@keyframes rot-2 {
+  50% {
+    transform: rotate(285deg)
+  }
+}
+
+.leftleg1 {
+  position: absolute;
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 125px;
+  top: 215px;
+  z-index: 0;
+  animation: leg1 2s infinite;
+}
+
+@keyframes leg1 {
+  50% {
+    top: calc(70% - 35px);
+  }
+}
+
+.leftleg2  {
+  position: absolute;
+  content: "";
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 140px;
+  top: 210px;
+  animation: leg2 2s infinite;
+}
+
+@keyframes leg2 {
+  50% {
+    top: calc(80% - 65px);
+  }
+}
+
+
+.leftleg3 {
+  position: absolute;
+  content: "";
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 155px;
+  top: 215px;
+  animation: leg1 2s infinite;
 }
 
 
 
+.rightleg1 {
+  position: absolute;
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 185px;
+  top: 215px;
+  animation: leg1 2s infinite;
+}
 
+.rightleg2 {
+  position: absolute;
+  content: "";
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 200px;
+  top: 210px;
+  animation: leg2 2s infinite;
+}
+
+
+.rightleg3 {
+  position: absolute;
+  content: "";
+  height: 70px;
+  width: 10px;
+  background-color: #cc1d23;
+  left: 215px;
+  top: 215px;
+  animation: leg1 2s infinite;
+}
 
 
 
